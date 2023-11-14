@@ -1,0 +1,23 @@
+<!-- confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+</head>
+<body>
+    <h2>Booking Confirmation</h2>
+    <p>Food coupons successfully booked!</p>
+    <h3>Confirmation Details:</h3>
+    <ul>
+        {% for item in booked_items %}
+            <li>
+                <strong>Food Name:</strong> {{ item.name }}<br>
+                <strong>Quantity:</strong> {{ item.quantity }}<br>
+                <strong>Time:</strong> {{ item.time }}<br>
+                <strong>Price:</strong> {{ item.price }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
